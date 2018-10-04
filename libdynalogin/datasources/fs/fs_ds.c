@@ -115,6 +115,8 @@ apr_status_t parse_user(dynalogin_user_data_t *user_data, const char *user_recor
 	user_data->last_success=atol(_substrings[field++]);
 	user_data->last_attempt=atol(_substrings[field++]);
 	user_data->last_code=_substrings[field++];
+	
+	return APR_SUCCESS;
 }
 
 apr_status_t load_users(apr_array_header_t **users,
